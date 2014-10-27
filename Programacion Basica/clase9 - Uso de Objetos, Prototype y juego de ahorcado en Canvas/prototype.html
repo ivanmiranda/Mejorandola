@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ahorcado</title>
+	<script type="text/javascript">
+		
+		var nombre = "Frisco";
+
+		var Mascota = function (n, v){
+			this.nombre = n;
+			this.voz = v;
+		};
+
+		var perro = new Mascota("roco", "guau!");
+		var gato = new Mascota("misifus", "los humanos son mis esclavos");
+
+		Mascota.prototype.hablar = function (){
+			alert(this.nombre + "dice: " + this.voz);
+		}
+
+		//Invocando a cada Mascota
+		perro.hablar();
+		gato.hablar();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

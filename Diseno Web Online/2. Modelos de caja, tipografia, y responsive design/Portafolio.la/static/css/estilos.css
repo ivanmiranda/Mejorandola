@@ -1,0 +1,393 @@
+::selection{
+	background: red;
+}
+
+/* Utilidades */
+
+.u-title{
+	color: #00CCFF;
+	border-bottom: 2px dashed #00CCFF;
+	font-size: 1.5em;
+	font-weight: normal;
+	text-align: center;
+	padding-bottom: .5em;
+}
+
+.u-containerDefault{
+	width: 800px;
+	margin: 0 auto;
+}
+
+/* MainMenu */
+
+.MainMenu{
+	background: #1E1E1E;
+	text-align: center;
+	height: 3.75em;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.MainMenu-list{
+	margin: 0;
+	padding: 0;
+}
+
+.MainMenu-item{
+	display: inline-block;
+}
+
+.MainMenu-link{
+	color: #00DBFF;
+	text-decoration: none;
+	line-height: 3.75em;
+	margin-right: 1.5em;
+}
+
+/* Header */
+
+.Header{
+	margin-top: 3.75em;
+	background-image: url('../img/bg_header2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+	text-align: center;
+	padding: 1.2em;
+
+}
+
+.Header-imageContainer{
+	margin: 0;
+}
+
+.Header-image{
+	border: 5px solid white;
+	border-radius: 50%;
+	-webkit-transition: 1s;
+}
+
+.Header-image:hover{
+	border-color: orange;
+	-webkit-transform: rotateY(360deg);
+}
+
+.Header-name, .Header-link{
+	color: white;
+}
+
+.Header-link{
+	font-size: 2.2em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.Header-name{
+	font-size: 1.5em;
+	font-weight: 300;
+	margin: 0;
+}
+
+/* Profile */
+
+.Profile{
+	text-align: center;
+}
+
+.Profile-link{
+	background: orange;
+	color: white;
+	text-decoration: none;
+	padding: .5em 1em;
+	border-radius: 2em;
+	margin-right: .5em;
+}
+
+/* Work */
+
+.Work{
+	margin-top: 2em;
+	text-align: center;
+}
+
+.Work-item{
+	display: inline-block;
+	margin-right: 1.8em;
+	margin-bottom: 1.8em;
+}
+
+.Work-imageContainer{
+	margin: 0;
+}
+
+.Work-description{
+	font-size: 1.1em;
+	color: #515151;
+	font-style: italic;
+}
+
+/* Footer */
+
+.Footer{
+	background-image: url('../img/bg2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.Footer-form{
+	text-align: center;
+	display: inline-block;
+}
+
+.Footer-left{
+	display: inline-block;
+	max-width: 32em;
+	text-align: center;
+	vertical-align: top;
+}
+
+.Footer-title{
+	color: white;
+}
+
+.Footer-formInput, .Footer-textarea{
+	background: white;
+	border: none;
+	display: block;
+	border-radius: 2em;
+	padding: .5em;
+	margin: 0 auto 1em;
+}
+
+.Footer-textarea{
+	resize: none;
+}
+
+.Footer-button{
+	background: orange;
+	color: white;
+	border-radius: 1em;
+	border: none;
+	padding: .5em 1em;
+}
+
+/* Si vas a usar imagen con partes transparentes, usar PNG, sino tiene, usar JPG, y para imagenes con
+movimiento, usar un GIF */
+
+/* Pseudoclases y pseudoelementos 
+
+a{
+	color: red;
+}
+
+a:hover{
+	color: black;
+}
+
+a:active{
+	color: green;
+}
+
+a:visited{
+	color: purple;
+}
+
+ul li{
+	background: green;
+}
+
+ul li:first-child{
+	background: blue;
+}
+
+ul li:last-child{
+	background: black;
+}
+
+ul li:nth-child(odd){
+	background: orange;
+}
+
+ul li:nth-child(even){
+	background: pink;
+}
+
+.MainMenu{
+	background: lightgray;
+}
+
+.MainMenu:before{
+	content: "";
+	max-width: 50px;
+	height: 50px;
+	display: block;
+	background: red;
+}
+
+.MainMenu:after{
+	content: "Contenido despues del selector";
+}
+
+p:first-line{
+	color: red;
+}
+
+p:first-letter{
+	color: gray;
+	font-size: 3em;
+}*/
+
+/*Selector de etiqueta
+header{
+	background: blue;
+}*/
+
+/*Selector ID, no se puede repetir, es unico
+#yo*/
+
+/*Selector Clase, se puede repetir
+.yo*/
+
+/*Selector de hijos
+ul li*/
+
+/*Selector de hijos directos, osea si hay otro li dentro de un li, no se modificara
+ul > li*/
+
+
+
+/*Selector adyacente, se le dara estilo al elemento que se encuentra al costado, 
+al que sigue del signo +, no a los dos ni al primero
+section + section */
+
+/*Selector de atributos, todos los elementos que tengan por ejemplo un href tendran 
+esos estilos o incluso mas especificos, todos los [href="#yo"] reciban esos estilos
+[href] */
+
+/*
+suitcss.github.io
+Se recomienda usar siempre selector de clases como .perfil, y usar convencion de SUIT con 5 reglas
+
+1. Basar en componentes nuestra pagina para diseniarla, ejemplo: footer, header, perfil, contacto, etc. 
+Esto se debe debe de escribir asi como ejemplo:
+.MyComponent {}
+
+2.Cada componente puede tener estados, y un estado es una segunda clase que se le aniade a mi elemento. 
+Recuerda siempre colocar las letras "is" para esta nomenclatura 
+Ejemplo:
+.MyComponent.is-animating{}
+
+3.Para modificadores, por ejemplo una imagen de tamanio pekenia y luego extendida
+Ejemplo:
+.MyComponent--modifier{}
+
+4.Para partes de componentes, por ejemplo mi perfil puede tener enlaces y un titulo, estas serian partes, 
+esto quedaria como .perfil-titulo{} y .perfil-enlace{}, ejemplo:
+.MyComponent-part{}
+.MyComponent-anotherPart{}
+
+5.Utilidades, seria escribir una clase que tenga utilidades, y se escribiria asi:
+.u-sizeFill{}
+*/
+
+/*.u-title{
+
+}*/
+
+/*.Header{
+*/	
+	/*background: gray;
+	
+	Para el ancho total del navegador
+	 display: block;*/
+	/*
+	Para el ancho total de su contenido y ademas hace que se apilen uno al lado del otro los elementos inline
+	Y con el tamanio del navegador, cuando ya no hay espacio para ellos, estos se caen hacia abajo para poderse
+	acododar
+	display: inline-block;*/
+	
+	/*Este sirve simplemente para que ya no aparezca
+	display: none;*/
+
+	/*Todos los elementos tienen por default position: static; 
+	top, right, bottom, left
+
+	background: gray;*/
+	/*Con position, top, left, right, bottom, no se respetan los demas elementos y se traslapan, para que no 
+	suceda eso, se debe de usar margin y con position static
+	position: relative;*/
+	/*top: 20px;
+	left: 20px;
+	display: inline-block;*/
+
+/*}
+
+.Header-imageContainer{
+
+}
+
+.Header-name{
+
+}
+
+.MainMenu{*/
+
+	/*Tambien se sale de las posiciones estaticas, solo que esta siempre quiere aparecer en la
+	pagina, por ejemplo una barra de menu en la parte superior
+	position: fixed;
+	background: green;
+	top: 0;*/
+	/*El colocar left y right 0, hacen que el elemento se estire de lado a lado y tomen la anchura
+	del navegador, esto para no usar display block y con positions
+	left: 0;
+	right: 0;*/
+	/*z-index es para poner el orden de las capas, una arriba de otra, comienza desde 1 a n
+	z-index: 1;*/
+
+/*}
+
+.Profile{*/
+	
+	/*
+	background: lightgray; 
+	display: inline-block;
+	
+	Alinear hasta arriba, al tope
+	vertical-align: top;
+	background: lightgray;
+	position: relative;*/
+
+/*}
+
+.Profile-span{*/
+	/*
+	background: red;
+	color: white;
+	font-weight: bold;
+	*/
+	/*El span al moverlo estos pixeles hacia un lado, aun su lugar anterior no lo toma nadie, 
+	se queda un espacio en blanco donde aparecia la palabra dentro de span
+	position: relative;
+	Position absolute busca al proximo elemento padre relativo para posicionarse al lado del el
+	position: absolute;
+	top: 20px;
+	left: 20px;*/
+
+/*}
+
+.Work{
+
+}
+
+.Footer{
+
+}*/
+/*Dentro de google.com/fonts se descargan las fuentas que uno desea, se verifica la velocidad de la 
+pagina que este en verde, es un termometro grafico, y despues se agrega debajo de meta de la pagina
+para que cargue desde el comienzo dicha fuente, luego se cambian las fuentes dentro de normalize.css*/

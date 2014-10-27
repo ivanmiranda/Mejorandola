@@ -1,0 +1,82 @@
+/*Selector de etiqueta
+header{
+	background: blue;
+}*/
+
+/*Selector ID, no se puede repetir, es unico
+#yo*/
+
+/*Selector Clase, se puede repetir
+.yo*/
+
+/*Selector de hijos
+ul li*/
+
+/*Selector de hijos directos, osea si hay otro li dentro de un li, no se modificara
+ul > li*/
+
+/*Selector adyacente, se le dara estilo al elemento que se encuentra al costado, 
+al que sigue del signo +, no a los dos ni al primero
+section + section */
+
+/*Selector de atributos, todos los elementos que tengan por ejemplo un href tendran 
+esos estilos o incluso mas especificos, todos los [href="#yo"] reciban esos estilos
+[href] */
+
+/*
+suitcss.github.io
+Se recomienda usar siempre selector de clases como .perfil, y usar convencion de SUIT con 5 reglas
+
+1. Basar en componentes nuestra pagina para diseniarla, ejemplo: footer, header, perfil, contacto, etc. 
+Esto se debe debe de escribir asi como ejemplo:
+.MyComponent {}
+
+2.Cada componente puede tener estados, y un estado es una segunda clase que se le aniade a mi elemento. 
+Recuerda siempre colocar las letras "is" para esta nomenclatura 
+Ejemplo:
+.MyComponent.is-animating{}
+
+3.Para modificadores, por ejemplo una imagen de tamanio pekenia y luego extendida
+Ejemplo:
+.MyComponent--modifier{}
+
+4.Para partes de componentes, por ejemplo mi perfil puede tener enlaces y un titulo, estas serian partes, 
+esto quedaria como .perfil-titulo{} y .perfil-enlace{}, ejemplo:
+.MyComponent-part{}
+.MyComponent-anotherPart{}
+
+5.Utilidades, seria escribir una clase que tenga utilidades, y se escribiria asi:
+.u-sizeFill{}
+*/
+.u-title{
+	color: red;
+	text-decoration: underline;
+}
+
+.Header{
+
+}
+
+.Header-imageContainer{
+
+}
+
+.Header-name{
+
+}
+
+.MainMenu{
+
+}
+
+.Profile{
+
+}
+
+.Work{
+
+}
+
+.Footer{
+
+}
