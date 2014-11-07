@@ -11,6 +11,8 @@
 		if(evt.keyCode == 13){
 			requestArtist()
 		}
+		//Al poner una letra, hace una consulta
+		//requestArtist()
 	}
 
 	function requestArtist(){
