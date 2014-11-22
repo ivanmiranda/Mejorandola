@@ -1,0 +1,33 @@
+/*Instalar node.js, seguido de stylus tecleando npm install -g stylus*/
+/*Colocarnos en donde se encuentra el archivo *.styl en consola y teclear stylus -c -w estilos.styl*/
+/*Instalar Nib, tecleando en consola npm install -g nib*/
+/*Seguido de esto teclear stylus -u nib -c -w estilos.styl para escuchar los cambios junto con Nib*/
+
+@import 'nib/vendor'
+
+@import 'nib/gradients'
+
+vendor-prefixes = o ms moz webkit papitas official
+
+body
+	backgroud blue
+	
+.btn
+	backgroud red
+	border 1px solid orange
+	color white
+	border-radius 5px
+	text-transform uppercase
+	transition 1s backgroud
+	&:hover
+		backgroud green
+	&.yellow
+		backgroud yellow
+		&:hover
+			backgroud orange
+		
+.padre
+	backgroud linear-gradient(top, white, black)
+	padding 200px
+	.hijo
+		font-size 100px	

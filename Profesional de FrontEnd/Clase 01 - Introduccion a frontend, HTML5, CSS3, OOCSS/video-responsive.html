@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Responsive Design</title>
+	<style type="text/css">
+	
+		body{
+			font-family: Arial;
+		}
+
+		#wrapper{
+			max-width: 1000px;
+			margin: auto;
+		}
+
+		.col1,
+		.col2{
+			width: 50%;
+			float: left;
+		}
+
+		/*Esto hace la magia usando un padding extranio que hace que el video tenga proporcion 16:9*/
+		.contenedor{
+			height: 0;
+			overflow: hidden;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			position: relative;
+		}
+
+		.contenedor iframe,
+		.contenedor object,
+		.contenedor embed,
+		.contenedor video{
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+		
+		@media screen and (max-width: 1000px) {
+			.col1,
+			.col2{
+				width: auto;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="col1">
+			<h1>Video Responsive con @LeonidasEsteban</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam assumenda earum accusamus rem, eius harum doloribus, totam velit animi, sint voluptate. Numquam accusantium officia autem officiis molestiae commodi atque, assumenda.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam assumenda earum accusamus rem, eius harum doloribus, totam velit animi, sint voluptate. Numquam accusantium officia autem officiis molestiae commodi atque, assumenda.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam assumenda earum accusamus rem, eius harum doloribus, totam velit animi, sint voluptate. Numquam accusantium officia autem officiis molestiae commodi atque, assumenda.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam assumenda earum accusamus rem, eius harum doloribus, totam velit animi, sint voluptate. Numquam accusantium officia autem officiis molestiae commodi atque, assumenda.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam assumenda earum accusamus rem, eius harum doloribus, totam velit animi, sint voluptate. Numquam accusantium officia autem officiis molestiae commodi atque, assumenda.</p>
+		</div>
+		<div class="col2">
+			<h2>Aprende Stylus</h2>
+			<div class="contenedor">
+				<iframe src="http://www.youtube.com/embed/t71Ei9jLD7c" width="720" height="480" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore veniam, nemo commodi enim, praesentium nisi, vitae voluptate, provident magnam quis nobis. Aspernatur sapiente consequatur, ad accusamus hic iste magni atque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quibusdam saepe optio sit temporibus expedita iusto unde, quidem iure. Vel repellat deleniti magni, aspernatur aliquam atque minus, esse corporis ipsam.</p>
+		</div>		
+	</div>
+</body>
+</html>
