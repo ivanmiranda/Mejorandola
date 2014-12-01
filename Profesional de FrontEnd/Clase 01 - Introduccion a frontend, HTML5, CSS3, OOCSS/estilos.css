@@ -1,0 +1,37 @@
+/*Instalar node.js, seguido de stylus tecleando npm install -g stylus*/
+/*Colocarnos en donde se encuentra el archivo *.styl en consola y teclear stylus -c -w estilos.styl*/
+/*Instalar Nib, tecleando en consola npm install -g nib*/
+/*Seguido de esto teclear stylus -u nib -c -w estilos.styl para escuchar los cambios junto con Nib*/
+body {
+  backgroud: #00f;
+}
+.btn {
+  backgroud: #f00;
+  border: 1px solid #ffa500;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -o-transition: 1s backgroud;
+  -ms-transition: 1s backgroud;
+  -moz-transition: 1s backgroud;
+  -webkit-transition: 1s backgroud;
+  -papitas-transition: 1s backgroud;
+  transition: 1s backgroud;
+}
+.btn:hover {
+  backgroud: #008000;
+}
+.btn.yellow {
+  backgroud: #ff0;
+}
+.btn.yellow:hover {
+  backgroud: #ffa500;
+}
+.padre {
+  backgroud: linear-gradient(top, #fff, #000);
+  padding: 200px;
+}
+.padre .hijo {
+  font-size: 100px;
+}
