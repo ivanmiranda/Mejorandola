@@ -1,0 +1,21 @@
+.canvas
+	overflow hidden
+	position relative
+	&-main
+		padding 10px 0
+	&-menu
+		width 200px
+		position absolute
+		left -200px
+		top 0
+		-webkit-transition 1s
+		&.is-active
+			left 0
+	&-sidebar
+		position absolute
+		width 200px
+		right -200px
+		top 0
+		-webkit-transition 1s
+		&.is-active
+			right 0

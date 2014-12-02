@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Shifter</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="base.css">
+	<style>
+		.shifter{
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+		.shifter-top{
+			margin-bottom: 20px;
+		}
+		.shifter-bottom{
+			padding: 20px 0;
+		}
+		.shifter-column{
+			width: 50%;
+			float: left;
+		}
+
+		@media screen and (max-width: 1024px) {
+			.shifter{
+				max-width: 900px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.shifter{
+				max-width: 600px;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.shifter{
+				max-width: 300px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<section class="shifter">
+		<div class="shifter-top verde_A">
+			<h1>Layout Shifter</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates voluptatum, laudantium consequuntur, veniam odit nostrum et ipsa dolore laborum nihil nesciunt est repellat amet laboriosam non perferendis vitae placeat eius.
+		</div>
+		<div class="shifter-bottom verde_B">
+			<div class="shifter-column verde_A">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus, quam, dolore reprehenderit, odit voluptatibus, cupiditate nulla cumque autem corporis voluptatum. Consequuntur repudiandae, eius ad natus reiciendis. Esse, nobis, maiores!
+			</div>
+			<div class="shifter-column verde_C">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptates voluptas ut dolor commodi laudantium nulla fuga officia quis non! Quas vel placeat, iusto quo. Iste magni, eos voluptatibus modi!
+			</div>
+		</div>
+	</section>
+</body>
+</html>
