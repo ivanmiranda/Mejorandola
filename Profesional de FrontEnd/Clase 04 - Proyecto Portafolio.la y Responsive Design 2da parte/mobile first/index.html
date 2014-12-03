@@ -11,8 +11,9 @@
 	<section class="Mobile">
 		<header class="Header verde_A is-active">
 			<h1 class="Header-logo">Mobile First</h1>
-			<button class="Header-button">Mostrar Menu</button>
-			<ul class="MainMenu is-active">
+			<button class="Header-button is-active" id="showMenu">Mostrar Menu</button>
+			<button class="Header-button" id="hideMenu">Ocultar Menu</button>
+			<ul class="MainMenu" id="menu">
 				<li class="MainMenu-item">
 					<a href="" class="MainMenu-link">Cursos</a>
 					<a href="" class="MainMenu-link">Conferencias</a>
@@ -31,5 +32,46 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus facilis molestiae rerum harum totam reprehenderit iusto numquam, quis, sapiente fuga ratione cum, exercitationem fugit dolorem vitae illo error et officia?
 		</div>
 	</section>
+	<script src="hammer.min.js"></script>
+	<script>
+		var $buttonShowMenu = document.getElementById('showMenu');
+		var $buttonHideMenu = document.getElementById('hideMenu');
+		var $buttonMenu = document.getElementById('menu');
+
+		var $body = document.querySelector('body');
+
+		//Hammer.js
+		var body = new Hammer($body);
+
+		body.on('tap', function(){
+			console.log('Esto es un tap');
+		});
+
+		body.on('panleft panright', function(){
+			console.log('Ha ocurrido un pan');
+		});
+
+		//var showMenu = function(){} es igual a function showMenu(){}
+
+		var showMenu = function(){
+			$buttonShowMenu.classlist.remove('is-active');
+			$buttonHideMenu.classlist.add('is-active');
+			$menu.classlist.add('is-active');
+		}
+
+		var hideMenu = function(){
+			$buttonShowMenu.classlist.add('is-active');
+			$buttonHideMenu.classlist.remove('is-active');
+			$menu.classlist.remove('is-active');
+		}
+
+		$buttonShowMenu.addEventListener("click", showMenu);
+
+		$buttonHideMenu.addEventListener("click", hideMenu);
+
+		body.on('panright', showMenu);
+		body.on('panleft', hideMenu);
+
+	</script>
 </body>
 </html>
