@@ -1,77 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="base.css">
-	<link rel="stylesheet" href="mobile.css">
-	<title>Mobile First</title>
+    <meta charset="UTF-8">
+    <title>Mobile First</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="mobile.css?v=1.0"/>
 </head>
 <body>
-	<section class="Mobile">
-		<header class="Header verde_A is-active">
-			<h1 class="Header-logo">Mobile First</h1>
-			<button class="Header-button is-active" id="showMenu">Mostrar Menu</button>
-			<button class="Header-button" id="hideMenu">Ocultar Menu</button>
-			<ul class="MainMenu" id="menu">
-				<li class="MainMenu-item">
-					<a href="" class="MainMenu-link">Cursos</a>
-					<a href="" class="MainMenu-link">Conferencias</a>
-					<a href="" class="MainMenu-link">Eventos</a>
-					<a href="" class="MainMenu-link">Contacto</a>
-				</li>
-			</ul>
-		</header>
-		<div class="Mobile-main verde_B">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa distinctio non sapiente suscipit odio necessitatibus deleniti libero similique, commodi natus voluptates cupiditate eaque sint consequuntur doloremque nulla vero rerum!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sit sapiente quasi molestiae dolorem accusamus eligendi voluptate a, aliquam soluta? Delectus cupiditate similique nemo ipsam? Excepturi tempore reiciendis ad soluta?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tenetur animi odio vero, doloribus itaque quibusdam aperiam. Libero aliquam dolores quaerat accusantium, voluptatum nesciunt sit saepe, distinctio dolorum cum ut.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus cumque, ab repellendus sunt amet perspiciatis voluptatum laboriosam aperiam, harum nam inventore reiciendis eius dolorem consequatur eos. Repellat inventore optio maiores.
-		</div>
-		<div class="Mobile-sidebar verde_C">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus facilis molestiae rerum harum totam reprehenderit iusto numquam, quis, sapiente fuga ratione cum, exercitationem fugit dolorem vitae illo error et officia?
-		</div>
-	</section>
-	<script src="hammer.min.js"></script>
-	<script>
-		var $buttonShowMenu = document.getElementById('showMenu');
-		var $buttonHideMenu = document.getElementById('hideMenu');
-		var $buttonMenu = document.getElementById('menu');
+    <section class="Canvas">
+        <header class="Header verde_A is-active">
+            <h1 class="Header-logo">Mobile First</h1>
+            <button class="Header-button is-active" id="showMenu">Mostrar menú</button>
+            <button class="Header-button" id="hideMenu">Ocultar menú</button>
 
-		var $body = document.querySelector('body');
-
-		//Hammer.js
-		var body = new Hammer($body);
-
-		body.on('tap', function(){
-			console.log('Esto es un tap');
-		});
-
-		body.on('panleft panright', function(){
-			console.log('Ha ocurrido un pan');
-		});
-
-		//var showMenu = function(){} es igual a function showMenu(){}
-
-		var showMenu = function(){
-			$buttonShowMenu.classlist.remove('is-active');
-			$buttonHideMenu.classlist.add('is-active');
-			$menu.classlist.add('is-active');
-		}
-
-		var hideMenu = function(){
-			$buttonShowMenu.classlist.add('is-active');
-			$buttonHideMenu.classlist.remove('is-active');
-			$menu.classlist.remove('is-active');
-		}
-
-		$buttonShowMenu.addEventListener("click", showMenu);
-
-		$buttonHideMenu.addEventListener("click", hideMenu);
-
-		body.on('panright', showMenu);
-		body.on('panleft', hideMenu);
-
-	</script>
+            <ul class="MainMenu" id="menu">
+                <li class="MainMenu-item">
+                    <a href="" class="MainMenu-link">
+                        Cursos
+                    </a>
+                </li>
+                <li class="MainMenu-item">
+                    <a href="" class="MainMenu-link">
+                        Conferencias
+                    </a>
+                </li>
+                <li class="MainMenu-item">
+                    <a href="" class="MainMenu-link">
+                        Eventos
+                    </a>
+                </li>
+                <li class="MainMenu-item">
+                    <a href="" class="MainMenu-link">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="Canvas-main verde_B">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quis enim earum similique, illo nesciunt, adipisci, quibusdam aspernatur sapiente corporis, sit nemo quo non veritatis aliquam modi. Odit, debitis, illum!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam illum doloribus omnis tenetur nisi laborum ipsum, vero obcaecati accusamus, quae, consequuntur placeat quos aliquid voluptate reiciendis ex quasi facilis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quis enim earum similique, illo nesciunt, adipisci, quibusdam aspernatur sapiente corporis, sit nemo quo non veritatis aliquam modi. Odit, debitis, illum!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam illum doloribus omnis tenetur nisi laborum ipsum, vero obcaecati accusamus, quae, consequuntur placeat quos aliquid voluptate reiciendis ex quasi facilis.
+        </div>
+        <div class="Canvas-sidebar verde_C">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum rerum nemo facilis dolorum illo aliquid deserunt omnis. Corporis ullam qui voluptatibus eaque, maiores cupiditate similique, in a, nisi aspernatur, maxime.
+        </div>
+    </section>
+    <script src="hammer.min.js"></script>
+    <script>
+        var $buttonShowMenu = document.getElementById('showMenu');
+        var $buttonHideMenu = document.getElementById('hideMenu');
+        var $menu = document.getElementById('menu');
+        
+        var $body = document.querySelector('body');
+        var body = new Hammer($body);
+        var showMenu = function(){
+            $buttonShowMenu.classList.remove('is-active');
+            $buttonHideMenu.classList.add('is-active');
+            $menu.classList.add('is-active');
+        }
+        var hideMenu = function(){
+            $buttonShowMenu.classList.add('is-active');
+            $buttonHideMenu.classList.remove('is-active');
+            $menu.classList.remove('is-active');
+        }
+        $buttonShowMenu.addEventListener("click", showMenu);
+        $buttonHideMenu.addEventListener("click", hideMenu);
+        body.on('panright', showMenu)
+        body.on('panleft', hideMenu)
+    </script>
 </body>
 </html>
