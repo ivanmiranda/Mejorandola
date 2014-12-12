@@ -10,7 +10,9 @@
     </head>
     <body>
         <header id="yo" class="Header">
-            <nav class="MainMenu">
+            <button class="Header-button is-active icon-showMenu" id="showMenu"></button>
+            <button class="Header-button icon-hideMenu" id="hideMenu"></button>
+            <nav class="MainMenu" id="menu">
                 <ul class="MainMenu-list">
                     <li class="MainMenu-item">
                         <a class="MainMenu-link" href="#yo">Yo</a>
@@ -112,15 +114,41 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="../static/js/vendors/responsiveslides.min.js"></script>
         <script src="../static/js/vendors/retina.min.js"></script>
+        <script src="../static/js/vendors/hammer.min.js"></script>
         <script>
           $(function() {
             $(".rslides").responsiveSlides();
 
-            if(window.matchMedia("(max-width: 768px)")){
+            if(window.matchMedia("(max-width: 768px)").matches){
 
+                console.log("Eres un celular");
+
+                var $buttonShowMenu = document.getElementById('showMenu');
+                var $buttonHideMenu = document.getElementById('hideMenu');
+                var $menu = document.getElementById('menu');
+                
+                var $body = document.querySelector('body');
+                var body = new Hammer($body);
+
+                var showMenu = function(){
+                    $buttonShowMenu.classList.remove('is-active');
+                    $buttonHideMenu.classList.add('is-active');
+                    $menu.classList.add('is-active');
+                }
+
+                var hideMenu = function(){
+                    $buttonShowMenu.classList.add('is-active');
+                    $buttonHideMenu.classList.remove('is-active');
+                    $menu.classList.remove('is-active');
+                }
+
+                $buttonShowMenu.addEventListener("click", showMenu);
+                $buttonHideMenu.addEventListener("click", hideMenu);
+                body.on('panright', showMenu);
+                body.on('panleft', hideMenu);
             }
             else{
-                
+                console.log("Eres un ipad o dispositivo grandote");   
             }
 
 
