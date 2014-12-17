@@ -2,8 +2,7 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
-vendor-prefixes = webkit o ms moz official papitas
-
+vendor-prefixes = webkit o ms moz official
 // animacion(parametro)
 // 	-webkit-animation parametro
 // 	-moz-animation parametro
@@ -11,8 +10,8 @@ vendor-prefixes = webkit o ms moz official papitas
 // 	-ms-animation parametro
 // 	animation parametro
 
-gris_claro = #818181
 gris_oscuro = #333333
+gris_claro = #818181
 rojo = #BD255B
 gris_mas_claro = #F0F0F0
 
@@ -28,24 +27,28 @@ img
 ul
 	margin 0
 	padding 0
+//buttons
 .button-menu
 	color gris_oscuro
 	left .5em
 	margin-top -10px
 	position absolute
 	top 50%
+//oocss classes
 .container
-	font-size 0
 	padding 1.4rem
+	font-size 0
 	text-align center
 .action
-	color red
-	margin-right .5em
+	color white
 	font-size 1.2em
+	margin-right .5em
 	&:last-child
 		margin-right 0
 	&.gray
 		color gris_claro
+	&.red
+		color red
 .actions
 	position absolute
 	bottom 0
@@ -60,13 +63,23 @@ ul
 	display none
 .relative
 	position relative
+.author
+	color gris_claro
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.right-text
+	text-align right
+.relative
+	position relative
 .padding
 	padding 1em
 .padding-tb
 	padding 1em 0
 .left
 	float left
-.right
+.right 
 	float right
 .wrap
 	width 1000px
@@ -86,18 +99,19 @@ ul
 	.max
 		right 0
 	.total
-		height 5px
 		background gris_claro
-		width 75%
 		border-radius 5px
+		height 5px
 		margin 0 auto
+		width 75%
 	.state
-		height 5px 
-		background rojo
-		width 30%
-		border-radius 5px
-		position relative
 		animation 10s state infinite linear
+		background rojo
+		border-radius 5px
+		height 5px
+		position relative
+		width 30%
+
 	.circle
 		background gris_oscuro
 		border-radius 50%
@@ -107,10 +121,11 @@ ul
 		top -2px
 		width 10px
 		animation 1s circle infinite
+
 @keyframes state
-	from
+	0%
 		width 0
-	to
+	100%
 		width 100%
 @keyframes circle
 	0%
@@ -118,23 +133,15 @@ ul
 	100%
 		transform scale(2)
 		opacity 0
-.author
-	color gris_claro
-.center-block
-	margin 0 auto
-.center-text
-	text-align center
-.right-text
-	text-align right
-.relative
-	position relative
 .header
 	height 3.5em
+	// a
+	// 	display none
 	.title
 		font-size 1.1em
-		text-align center
-		margin 0
 		line-height 3.5em
+		margin 0
+		text-align center
 .song
 	display inline-block
 	font-size 1rem
@@ -146,10 +153,12 @@ ul
 		margin-right 0
 	p
 		margin .5em 0
+
 .playing
 	&.small
 		width 20em
 		margin 0 auto
+
 .input
 	border 1px solid gris_claro
 	height 2.5em
@@ -168,10 +177,9 @@ ul
 	font-size 1.2em
 .playlist
 	border-left 1px solid gris_claro
-	display block
-	display none
 	padding 0 2em
 	width 22em
+	display none
 	.list
 		list-style none
 	.item
@@ -179,13 +187,12 @@ ul
 	.action
 		font-size .8em
 .isotipo
-		width 122px
+	width 122px
 .logo
-	display block
-	padding 1.3em 0
-	overflow hidden
 	background white
+	padding 1.3em 0
 	display none
+	clearfix()
 .avatar
 	width 38px
 	height 38px
@@ -199,9 +206,11 @@ ul
 		border-right 7px solid transparent
 		border-top 9px solid gris_claro
 		content ""
-		display inline-block
-		margin-left  .4em
+			display inline-block
+			margin-left .4em
+
 @media screen and (min-width:480px)
+
 	.song
 		&:nth-child(even)
 			margin-right 1em
@@ -212,7 +221,7 @@ ul
 	.playing
 		&.medium
 			width auto
-			
+
 @media screen and (min-width:1000px)
 	body
 		background gris_mas_claro
@@ -234,19 +243,20 @@ ul
 			list-style none
 			a
 				color gris_oscuro
-				text-transform uppercase
 				cursor pointer
-				padding 1em
 				display block
+				padding 1em
+				text-transform uppercase
 				border-top 5px solid transparent
 				transition .3s border-top
-				&:hover	
+				&:hover
 					border-top 5px solid gris_claro
 	.music
 		width 32.5em
 		float left
 		.description
 			display none
+	
 	.header
 		height auto
 		border none
