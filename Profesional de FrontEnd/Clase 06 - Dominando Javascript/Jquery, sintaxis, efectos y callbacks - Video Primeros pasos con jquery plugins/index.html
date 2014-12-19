@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Tutorial</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/carrusel.jquery.js"></script>
+</head>
+<body>
+	<section>
+		<a href="#" id="anterior">&laquo;</a>
+		<div id="marco">
+			<ul>
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+				<li><img src="img/5.jpg" alt=""></li>
+			</ul>
+		</div>
+		<a href="#" id="siguiente">&raquo;</a>
+	</section>
+	<script type="text/javascript">
+		$('#marco').carrusel('#anterior', '#siguiente');
+	</script>
+</body>
+</html>
