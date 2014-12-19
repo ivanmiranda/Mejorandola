@@ -20,7 +20,7 @@
 				$container.append($fotos.eq(i).clone());
 			}
 
-			$(sig).click(function(e){
+			$(sig).click(function(e) {
 				e.preventDefault();
 
 				if(!estaMoviendo){
@@ -43,7 +43,7 @@
 
 			});
 
-			$(prev).click(function(e)) {
+			$(prev).click(function(e) {
 				e.preventDefault();
 
 				if(!estaMoviendo){
@@ -64,7 +64,7 @@
 					});
 				}
 
-			}
+			});
 
 		});
 	}
