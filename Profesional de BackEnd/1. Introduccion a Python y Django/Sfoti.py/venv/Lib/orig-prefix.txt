@@ -1,1 +1,1 @@
-c:\Python34
+C:\Python27
