@@ -1,4 +1,4 @@
-#!c:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv\Scripts\python.exe
+#!C:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv\Scripts\python.exe
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

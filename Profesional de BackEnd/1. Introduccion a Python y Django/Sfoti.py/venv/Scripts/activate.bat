@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=c:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv"
+set "VIRTUAL_ENV=C:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

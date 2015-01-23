@@ -39,7 +39,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'c:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv'; else echo '/c/xampp/htdocs/Mejorandola/Profesional de BackEnd/1. Introduccion a Python y Django/Sfoti.py/venv'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\xampp\htdocs\Mejorandola\Profesional de BackEnd\1. Introduccion a Python y Django\Sfoti.py\venv'; else echo '/C/xampp/htdocs/Mejorandola/Profesional de BackEnd/1. Introduccion a Python y Django/Sfoti.py/venv'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

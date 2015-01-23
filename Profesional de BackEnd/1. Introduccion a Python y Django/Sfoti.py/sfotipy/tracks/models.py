@@ -1,7 +1,7 @@
 from django.db import models
 
-from albums.models import Album
 from artists.models import Artist
+from albums.models import Album
 
 # Create your models here.
 class Track(models.Model):
