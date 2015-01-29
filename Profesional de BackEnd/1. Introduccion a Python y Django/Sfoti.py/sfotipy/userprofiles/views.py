@@ -8,6 +8,7 @@ def signup(request):
 
 	if form.is_valid():
 		form.save()
+		#Logear inmediatamente despues de guardar el usuario
 
 	return render(request, 'signup.html', {'form': form})
 
