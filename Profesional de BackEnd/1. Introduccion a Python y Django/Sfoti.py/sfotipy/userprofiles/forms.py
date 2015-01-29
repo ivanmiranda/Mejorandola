@@ -29,7 +29,7 @@ class EmailAuthenticationForm(forms.Form):
 		elif not self.user_cache.is_active:
 			raise forms.ValidationError('Usuario inactivo')
 
-			return self.cleaned_data
+		return self.cleaned_data
 
-		def get_user(self):
-			return self.user_cache
+	def get_user(self):
+		return self.user_cache
