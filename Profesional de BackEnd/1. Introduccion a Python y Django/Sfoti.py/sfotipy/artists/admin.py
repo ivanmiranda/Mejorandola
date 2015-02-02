@@ -12,13 +12,21 @@ class TrackInline(admin.StackedInline):
 from albums.models import Album
 
 class AlbumInline(admin.StackedInline):
+<<<<<<< HEAD
 	model = Album
+=======
+	model = Track
+>>>>>>> origin/master
 	extra = 1
 
 class ArtistAdmin(admin.ModelAdmin):
 	search_fields = ('first_name', 'last_name')
 	#filter_horizontal = ('favorite_songs', )
 	filter_vertical = ('favorite_songs', )
+<<<<<<< HEAD
 	inlines = [TrackInline, AlbumInline]
+=======
+	inlines = [TrackInline, AlbumInline, ]
+>>>>>>> origin/master
 
 admin.site.register(Artist, ArtistAdmin)
