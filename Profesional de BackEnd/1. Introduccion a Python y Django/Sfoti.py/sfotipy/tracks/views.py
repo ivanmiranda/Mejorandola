@@ -15,7 +15,8 @@ def track_view(request, title):
 	except Track.DoesNotExist:
 		raise Http404
 	"""
-
+	#Para debugear, revisar codigo
+	#import ipdb; ipdb.set_track()	
 	track = get_object_or_404(Track, title=title)
 	bio = track.artist.biography
 
@@ -31,12 +32,12 @@ def track_view(request, title):
 		}
 	}
 
-	json_data = json.dumps(data)
+	#json_data = json.dumps(data)
 
 	#Para cambiar de JSON a datos que reconosca python
 	#json.loads(string_json)
 
-	return HttpResponse(json_data, content_type='application/json')
+	#return HttpResponse(json_data, content_type='application/json')
 
 	#return HttpResponse('Ok')
-	#return render(request, 'track.html', {'track': track, 'bio': bio})
+	return render(request, 'track.html', {'track': track, 'bio': bio})
