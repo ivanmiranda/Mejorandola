@@ -4,6 +4,7 @@ from django.http import HttpResponse, Http404
 
 from .models import Track
 # Create your views here.
+#@login_required
 def track_view(request, title):
 
 	""" Aqui se pregunta si el title que se manda en la url existe en Track, 
