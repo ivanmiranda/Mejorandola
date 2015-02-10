@@ -7,5 +7,15 @@ class Artist(models.Model):
 	biography = models.TextField(blank=True)
 	favorite_songs = models.ManyToManyField('tracks.Track', blank=True, related_name='is_favorite_of')
 
+	def es_pharrel(self):
+		return self.id == 1
+
+	# @staticmethod
+	# def autocomplete_search_fields():
+	# 	return ("id__iexact", "first_name__icontains", "last_name__icontains")
+
+	# def __unicode__(self):
+	# 	return u'%s %s' % (self.first_name, self.last_name)
+
 	def __unicode__(self):
 		return self.first_name

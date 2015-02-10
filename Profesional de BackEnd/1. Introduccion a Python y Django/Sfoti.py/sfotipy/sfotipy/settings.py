@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+ALLOWED_HOSTS = ['localhost']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -20,11 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '&)&qf-bes)(cfmrqs)ckwo8r=)d@y_nj!9+cojl&85)*dzbncu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = []
 
 # Application definition
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
@@ -51,6 +49,7 @@ INSTALLED_APPS = (
     'userprofiles',
     'mockups',
     'django_extensions',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -96,8 +95,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 
 MEDIA_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['media'])
+STATIC_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['content'])
 MEDIA_URL = '/media/'
 
 # Backends
