@@ -1,5 +1,9 @@
 from django.conf.urls import patterns, include, url
 
+from django.conf.urls import patterns, url
+from userprofiles.views import LoginView
+from django.views.generic import TemplateView
+
 from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
@@ -28,6 +32,7 @@ urlpatterns = patterns('',
     url(r'^artists/', ArtistListView.as_view()),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^login/$', TemplateView.as_view(template_name='login.html'), name='login'),
 )
 
 urlpatterns += patterns('',

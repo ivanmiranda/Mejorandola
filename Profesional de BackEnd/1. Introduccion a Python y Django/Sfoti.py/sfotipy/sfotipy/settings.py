@@ -20,7 +20,7 @@ ALLOWED_HOSTS = ['localhost']
 SECRET_KEY = '&)&qf-bes)(cfmrqs)ckwo8r=)d@y_nj!9+cojl&85)*dzbncu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 

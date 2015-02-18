@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import login
+from django.views.generic import View
+from django.http import HttpResponse
 
 from .forms import UserCreationEmailForm, EmailAuthenticationForm
 # Create your views here.
@@ -19,3 +21,8 @@ def signin(request):
 		login(request, form.get_user())
 
 	return render(request, 'signin.html', {'form': form})
+
+class LoginView(View):
+	
+	def get(self, request, *args, **kwargs):
+		return HttpResponse('LoginView!!')
