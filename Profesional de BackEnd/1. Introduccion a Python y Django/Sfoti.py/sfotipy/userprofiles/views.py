@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import login
-from django.views.generic import View
+from django.views.generic import TemplateView
 from django.http import HttpResponse
 
 from .forms import UserCreationEmailForm, EmailAuthenticationForm
@@ -22,7 +22,27 @@ def signin(request):
 
 	return render(request, 'signin.html', {'form': form})
 
-class LoginView(View):
+class LoginView(TemplateView):
 	
-	def get(self, request, *args, **kwargs):
-		return HttpResponse('LoginView!!')
+	#def get(self, request, *args, **kwargs):
+		#return HttpResponse('LoginView!!')
+
+	template_name = 'login.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(LoginView, self).get_context_data(**kwargs)
+		is_auth = False
+		name=None
+
+		if self.request.user.is_authenticated():
+			is_auth = True
+			name = self.request.user.username
+
+		data = {
+			'is_auth': is_auth,
+			'name': name,
+		}
+
+		context.update({'is_auth': is_auth})
+
+		return context
