@@ -43,6 +43,20 @@ class LoginView(TemplateView):
 			'name': name,
 		}
 
-		context.update({'is_auth': is_auth})
+		context.update(data)
 
 		return context
+
+class ProfileView(TemplateView):
+	template_name = 'profile.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(ProfileView, self).get_context_data(**kwargs)
+
+		if self.request.user.is_authenticated():
+			context.update({'userprofile': self.get_userprofile()})
+
+		return context
+
+	def get_userprofile(self):
+		return self.request.user.userprofile

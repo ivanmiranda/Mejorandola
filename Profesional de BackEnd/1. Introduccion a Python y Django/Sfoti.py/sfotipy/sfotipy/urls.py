@@ -3,12 +3,15 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls import patterns, url
 from userprofiles.views import LoginView
 from django.views.generic import TemplateView
+from django.views.generic import RedirectView
 
 from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 from artists.views import ArtistDetailView, ArtistListView
 from rest_framework import routers
+
+from .views import LoginView
 
 from artists.views import ArtistViewSet
 from albums.views import AlbumViewSet
@@ -32,7 +35,9 @@ urlpatterns = patterns('',
     url(r'^artists/', ArtistListView.as_view()),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^login/$', TemplateView.as_view(template_name='login.html'), name='login'),
+    url(r'^login/$', LoginView.as_view(), name='login'),
+    url(r'^profile/$', ProfileView.as_view(), name='profile'),
+    url(r'^perfil/$', RedirectView.as_view(url='/profile/'), name='perfil'),
 )
 
 urlpatterns += patterns('',
