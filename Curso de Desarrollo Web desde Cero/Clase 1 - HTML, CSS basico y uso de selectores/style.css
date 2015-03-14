@@ -1,0 +1,50 @@
+html {
+	font-size: 100%;
+}
+
+/*Selector Universal
+* {
+	color:red;
+}
+*/
+
+/*Selector de Elemento, sirven para definir todos los H1 y todos los elementos por default*/
+h1, .h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: maroon;
+	font-size: 24px;
+}
+
+h2, .h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: green;
+	font-size: 16px;
+	font-size: 1rem;/*Fallback, cuando el rem no funcina en IE8, jalara los 16px*/
+}
+
+/*Selector de ID, ya no es bueno usarlos para CSS
+#topbar {
+	background-color: pink;
+}
+*/
+
+.background-pink {
+	background-color: pink;
+}
+
+/*Selector de Clase*/
+.article {
+
+}
+	.article__header {
+		font-family: Arial, Helvetica, sans-serif;
+		color: green;
+	}
+	
+	.article__footer {
+
+	}
+
+	.article--bgblue {
+		background-color: blue;
+	}
