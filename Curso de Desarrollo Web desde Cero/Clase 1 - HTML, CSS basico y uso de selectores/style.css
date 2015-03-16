@@ -48,3 +48,13 @@ h2, .h2 {
 	.article--bgblue {
 		background-color: blue;
 	}
+
+li[data-RobotOwner="Koji Kabuto"] {
+	background-color: olive;
+	color: white;
+}
+
+li[data-RobotOwner="Sayaka Yumi"] {
+	background-color: brown;
+	color: white;
+}
