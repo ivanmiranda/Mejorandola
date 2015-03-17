@@ -58,3 +58,30 @@ li[data-RobotOwner="Sayaka Yumi"] {
 	background-color: brown;
 	color: white;
 }
+
+input:focus {
+	
+}
+
+input:checked {
+
+}
+
+input[type="email"]:valid {
+	background-color: peru;
+}
+
+input[type="email"]:focus:invalid {
+	background-color: red;
+}
+
+.toggle:checked ~ .checked {
+	background-color: olive;
+}
+
+.checked {
+	width: 100px;
+	height: 100px;
+	background-color: peru;
+}
+
