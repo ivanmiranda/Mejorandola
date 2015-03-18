@@ -1,20 +1,26 @@
-main {
-	display: table;
-	caption-side: top;
+body{
+	margin: 0;
+	padding: 0;
+}
+.weather-card {
+	background-color: #80EAE8;
+	padding: .5em;
 }
 
-	header {
-		display: table-caption;
+	.weather-card__header {
+		margin: 0;
 	}
 
-	section {
-		display: table-row;
-		background-color: maroon;
-		width: 80%;
+	.weather-card__date {
+		font-weight: normal;
+		font-size: 12px;
+		font-family: courier;
+		margin: 0;
+		border-bottom: 1px solid #D380EA;
 	}
 
-	aside {
-		display: table-cell;
-		background-color: peru;
-		width: 20%;
+	.weather-card__footer {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 	}
