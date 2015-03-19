@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 }
+
 .weather-card {
 	background-color: #80EAE8;
 	padding: .5em;
@@ -15,8 +16,9 @@ body{
 		font-weight: normal;
 		font-size: 12px;
 		font-family: courier;
-		margin: 0;
+		margin: 0 0 .5em 0;
 		border-bottom: 1px solid #D380EA;
+		display: block;
 	}
 
 	.weather-card__footer {
@@ -24,3 +26,11 @@ body{
 		padding: 0;
 		list-style-type: none;
 	}
+
+.centrar {
+	width: 400px;
+	/*Igual que lo de abajo, pero mejor, ya que no defines en 0 los margenes de arriba y abajo
+	margin: 0 auto;*/
+	margin-left: auto;
+	margin-right: auto;
+}
